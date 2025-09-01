@@ -14,6 +14,3 @@ Includes shell utilities, setup scripts, and notes for working with tools
     - [init-endeavour.sh](scripts/init-endeavour.sh) — Initialization script for EndeavourOS
     - [install-discord-kde.sh](scripts/install-discord-kde.sh) — Script to install Discord on KDE
     - [tg-pattern-generator.py](scripts/tg-pattern-generator.py) — Python script to generate Telegram Premium background patterns
-
----
-
