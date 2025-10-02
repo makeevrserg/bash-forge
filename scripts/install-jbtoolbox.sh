@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-cd /tmp
+mkdir -p ~/autoinstall
+cd ~/autoinstall
 
 VERSION="2.9.0.56191"
 # Download JetBrains Toolbox
