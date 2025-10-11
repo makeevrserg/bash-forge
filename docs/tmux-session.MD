@@ -1,3 +1,4 @@
+```bash
 # Start a new session
 tmux new -s <session>
 
@@ -12,3 +13,4 @@ tmux attach -t <session>
 
 # See tmux sessions
 tmux ls
+```
