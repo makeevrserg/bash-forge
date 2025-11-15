@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-if ! pacman -Q zram-generator &>/dev/null; then
-    echo "Installing zram-generator..."
-    sudo pacman -Sy --noconfirm zram-generator
-fi
-
 sudo tee /etc/systemd/zram-generator.conf >/dev/null <<EOF
 [zram0]
 zram-size = ram
