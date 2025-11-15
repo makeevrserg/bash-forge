@@ -40,7 +40,9 @@ try_install_docker() {
         install_pacman_package "docker"
         sudo systemctl enable docker.service
         sudo systemctl start docker.service
-        sudo groupadd docker
+        if ! getent group docker >/dev/null; then
+            sudo groupadd docker
+        fi
         sudo usermod -aG docker $USER
         newgrp docker
     fi
@@ -84,3 +86,10 @@ try_install_aur_package "slack-desktop"
 fix_dns_vnp
 
 assert_amnezia_launched
+
+bash init-zram.sh
+bash install-discord.sh --ignore-if-installed
+bash install-filezilla.sh --ignore-if-installed
+bash install-hmcl.sh --ignore-if-installed
+bash install-obsidian.sh --ignore-if-installed
+bash install-jbtoolbox.sh --ignore-if-installed

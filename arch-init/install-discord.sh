@@ -8,6 +8,9 @@ CATEGORIES="Network;InstantMessaging;"
 EXEC_SUBPATH="Discord/Discord"
 APP_NAME=$(echo "$DISPLAY_NAME" | tr 'A-Z' 'a-z' | tr -d ' ')
 
+source ./util.sh
+check_ignore_if_installed "/usr/bin/$APP_NAME" "$@" || exit 0
+
 # Temp download location
 cd /tmp
 

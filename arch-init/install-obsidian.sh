@@ -7,6 +7,9 @@ CATEGORIES="Utility;TextEditor;Office;"
 APP_NAME=$(echo "$DISPLAY_NAME" | tr 'A-Z' 'a-z' | tr -d ' ')
 ICON_PATH="$(pwd)/icons/ic_obsidian.png"
 
+source ./util.sh
+check_ignore_if_installed "/usr/bin/$APP_NAME" "$@" || exit 0
+
 # Temp download location
 cd /tmp
 

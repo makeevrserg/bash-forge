@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+source ./util.sh
+is_jbtoolbox_installed "$@" || exit 0
+
 mkdir -p ~/autoinstall
 cd ~/autoinstall
 
