@@ -68,8 +68,12 @@ assert_amnezia_launched() {
     fi
 }
 
+bash install-yay.sh
+
 try_install_docker
 
+try_install_pacman_package "nano"
+try_install_pacman_package "git"
 try_install_pacman_package "gtk2"
 try_install_pacman_package "libxcrypt-compat"
 try_install_pacman_package "telegram-desktop"
