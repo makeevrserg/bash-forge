@@ -36,7 +36,7 @@ sudo cp "$ICON_PATH" "$INSTALL_DIR/icons/icon.png"
 echo "Creating executable wrapper..."
 sudo tee "/usr/bin/$APP_NAME" > /dev/null <<EOF
 #!/bin/bash
-exec java -jar "$INSTALL_DIR/$APP_NAME.jar" "\$@"
+exec java -Dhmcl.offline.auth.restricted=false -jar "$INSTALL_DIR/$APP_NAME.jar" "\$@"
 EOF
 
 sudo chmod +x "/usr/bin/$APP_NAME"
